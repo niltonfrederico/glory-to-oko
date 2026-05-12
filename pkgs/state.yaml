@@ -1,0 +1,4 @@
+applied:
+  - id: "0001_initial"
+    applied_at: "2026-05-12T00:00:00-03:00"
+    note: "Faked apply — host already matched this state at bootstrap."
