@@ -1,614 +1,131 @@
 version: 1
 packages:
   # --- sistema base e Garuda ---
-  - {
-      manager: paru,
-      name: base-devel,
-      description: "Ferramentas base para compilar pacotes do Arch",
-    }
-  - {
-      manager: paru,
-      name: performance-tweaks,
-      description: "Ajustes de performance do Garuda",
-    }
-  - {
-      manager: paru,
-      name: linux-headers,
-      description: "Headers do kernel para compilar módulos",
-    }
-  - {
-      manager: paru,
-      name: v4l2loopback-dkms,
-      description: "Módulo v4l2-loopback (câmera virtual) via DKMS",
-    }
-  - {
-      manager: paru,
-      name: fwupd,
-      description: "Daemon de atualização de firmware via LVFS",
-    }
-  - {
-      manager: paru,
-      name: rate-mirrors,
-      description: "Ranqueia mirrors do Arch por latência e proximidade",
-    }
-  - {
-      manager: paru,
-      name: garuda-mokka,
-      description: "Tema Mokka e presets de desktop do Garuda",
-    }
-  - {
-      manager: paru,
-      name: garuda-toolbox,
-      description: "Coleção de ferramentas para gerenciar o Garuda Linux",
-    }
+  - {manager: paru, name: base-devel, description: "Ferramentas base para compilar pacotes do Arch"}
+  - {manager: paru, name: performance-tweaks, description: "Ajustes de performance do Garuda"}
+  - {manager: paru, name: linux-headers, description: "Headers do kernel para compilar módulos"}
+  - {manager: paru, name: v4l2loopback-dkms, description: "Módulo v4l2-loopback (câmera virtual) via DKMS"}
+  - {manager: paru, name: fwupd, description: "Daemon de atualização de firmware via LVFS"}
+  - {manager: paru, name: rate-mirrors, description: "Ranqueia mirrors do Arch por latência e proximidade"}
+  - {manager: paru, name: garuda-mokka, description: "Tema Mokka e presets de desktop do Garuda"}
+  - {manager: paru, name: garuda-toolbox, description: "Coleção de ferramentas para gerenciar o Garuda Linux"}
   # --- KDE / desktop ---
-  - {
-      manager: paru,
-      name: kwin-effect-rounded-corners-git,
-      description: "Cantos arredondados em janelas no KWin Wayland",
-    }
-  - {
-      manager: paru,
-      name: kwin-effects-better-blur-dx,
-      description: "Fork do efeito blur do KWin com força por classe de janela",
-    }
-  - {
-      manager: paru,
-      name: ark,
-      description: "Gerenciador de arquivos compactados do KDE",
-    }
-  - {
-      manager: paru,
-      name: dolphin,
-      description: "Gerenciador de arquivos do KDE",
-    }
-  - {
-      manager: paru,
-      name: kate,
-      description: "Editor de texto avançado do KDE",
-    }
-  - {
-      manager: paru,
-      name: okular,
-      description: "Visualizador de documentos do KDE",
-    }
-  - {
-      manager: paru,
-      name: partitionmanager,
-      description: "Utilitário KDE para particionamento e filesystems",
-    }
-  - {
-      manager: paru,
-      name: qdirstat,
-      description: "Estatísticas visuais de uso de diretórios em Qt",
-    }
-  - {
-      manager: paru,
-      name: vicinae-bin,
-      description: "Launcher tipo Raycast, FOSS, para Linux",
-    }
+  - {manager: paru, name: kwin-effect-rounded-corners-git, description: "Cantos arredondados em janelas no KWin Wayland"}
+  - {manager: paru, name: kwin-effects-better-blur-dx, description: "Fork do efeito blur do KWin com força por classe de janela"}
+  - {manager: paru, name: ark, description: "Gerenciador de arquivos compactados do KDE"}
+  - {manager: paru, name: dolphin, description: "Gerenciador de arquivos do KDE"}
+  - {manager: paru, name: kate, description: "Editor de texto avançado do KDE"}
+  - {manager: paru, name: okular, description: "Visualizador de documentos do KDE"}
+  - {manager: paru, name: partitionmanager, description: "Utilitário KDE para particionamento e filesystems"}
+  - {manager: paru, name: qdirstat, description: "Estatísticas visuais de uso de diretórios em Qt"}
+  - {manager: paru, name: vicinae-bin, description: "Launcher tipo Raycast, FOSS, para Linux"}
   # --- terminal e shell ---
-  - {
-      manager: paru,
-      name: ghostty,
-      description: "Emulador de terminal nativo acelerado por GPU",
-    }
-  - { manager: brew, name: tmux, description: "Multiplexador de terminal" }
+  - {manager: paru, name: ghostty, description: "Emulador de terminal nativo acelerado por GPU"}
+  - {manager: brew, name: tmux, description: "Multiplexador de terminal"}
   # --- input method e i18n ---
-  - {
-      manager: paru,
-      name: wayland-cedilla-fix,
-      description: "Corrige cedilha (ç) em compositores Wayland",
-    }
-  - {
-      manager: paru,
-      name: fcitx5,
-      description: "Framework de input method (próxima geração do fcitx)",
-    }
-  - {
-      manager: paru,
-      name: fcitx5-configtool,
-      description: "Ferramenta de configuração do Fcitx5",
-    }
-  - {
-      manager: paru,
-      name: fcitx5-gtk,
-      description: "Módulo IM GTK e cliente D-Bus do Fcitx5",
-    }
-  - {
-      manager: paru,
-      name: fcitx5-qt,
-      description: "Integração Qt5/Qt6 do Fcitx5",
-    }
-  - {
-      manager: paru,
-      name: icu,
-      description: "Biblioteca International Components for Unicode",
-    }
-  - {
-      manager: brew,
-      name: xkeyboard-config,
-      description: "Banco de configurações de teclado do X",
-    }
-  - {
-      manager: brew,
-      name: libxfont2,
-      description: "Lib de rasterização de fontes para X11",
-    }
-  - {
-      manager: brew,
-      name: uchardet,
-      description: "Detector de encoding de arquivos",
-    }
+  - {manager: paru, name: wayland-cedilla-fix, description: "Corrige cedilha (ç) em compositores Wayland"}
+  - {manager: paru, name: fcitx5, description: "Framework de input method (próxima geração do fcitx)"}
+  - {manager: paru, name: fcitx5-configtool, description: "Ferramenta de configuração do Fcitx5"}
+  - {manager: paru, name: fcitx5-gtk, description: "Módulo IM GTK e cliente D-Bus do Fcitx5"}
+  - {manager: paru, name: fcitx5-qt, description: "Integração Qt5/Qt6 do Fcitx5"}
+  - {manager: paru, name: icu, description: "Biblioteca International Components for Unicode"}
+  - {manager: brew, name: xkeyboard-config, description: "Banco de configurações de teclado do X"}
+  - {manager: brew, name: libxfont2, description: "Lib de rasterização de fontes para X11"}
+  - {manager: brew, name: uchardet, description: "Detector de encoding de arquivos"}
   # --- navegadores e comunicação ---
-  - {
-      manager: paru,
-      name: chromium,
-      description: "Navegador web focado em velocidade e segurança",
-    }
-  - {
-      manager: paru,
-      name: google-chrome,
-      description: "Navegador Google Chrome (canal stable)",
-    }
-  - {
-      manager: paru,
-      name: discord,
-      description: "Chat de voz e texto para gamers",
-    }
-  - {
-      manager: paru,
-      name: slack-desktop,
-      description: "Cliente Slack desktop (beta) para Linux",
-    }
-  - {
-      manager: paru,
-      name: proton-mail-bin,
-      description: "App desktop oficial do Proton Mail e Proton Calendar",
-    }
+  - {manager: paru, name: chromium, description: "Navegador web focado em velocidade e segurança"}
+  - {manager: paru, name: google-chrome, description: "Navegador Google Chrome (canal stable)"}
+  - {manager: paru, name: discord, description: "Chat de voz e texto para gamers"}
+  - {manager: paru, name: slack-desktop, description: "Cliente Slack desktop (beta) para Linux"}
+  - {manager: paru, name: proton-mail-bin, description: "App desktop oficial do Proton Mail e Proton Calendar"}
   # --- editores e IDEs ---
-  - {
-      manager: paru,
-      name: visual-studio-code-bin,
-      description: "Editor da Microsoft para desenvolvimento (binário oficial)",
-    }
-  - {
-      manager: brew,
-      name: neovim,
-      description: "Fork do Vim focado em extensibilidade",
-    }
+  - {manager: paru, name: visual-studio-code-bin, description: "Editor da Microsoft para desenvolvimento (binário oficial)"}
+  - {manager: brew, name: neovim, description: "Fork do Vim focado em extensibilidade"}
   # --- linguagens e toolchains ---
-  - { manager: brew, name: rustup, description: "Instalador da toolchain Rust" }
-  - {
-      manager: brew,
-      name: python@3.13,
-      description: "Interpretador Python 3.13",
-    }
-  - {
-      manager: brew,
-      name: nvm,
-      description: "Gerencia múltiplas versões do Node.js",
-    }
-  - {
-      manager: paru,
-      name: jdk-openjdk,
-      description: "Kit de desenvolvimento Java OpenJDK 26",
-    }
-  - {
-      manager: paru,
-      name: ruby,
-      description: "Linguagem dinâmica orientada a objetos",
-    }
-  - {
-      manager: paru,
-      name: lldb,
-      description: "Debugger de alta performance da família LLVM",
-    }
-  - {
-      manager: brew,
-      name: pipx,
-      description: "Executa binários de pacotes Python em ambientes isolados",
-    }
+  - {manager: brew, name: rustup, description: "Instalador da toolchain Rust"}
+  - {manager: brew, name: python@3.13, description: "Interpretador Python 3.13"}
+  - {manager: brew, name: nvm, description: "Gerencia múltiplas versões do Node.js"}
+  - {manager: paru, name: jdk-openjdk, description: "Kit de desenvolvimento Java OpenJDK 26"}
+  - {manager: paru, name: ruby, description: "Linguagem dinâmica orientada a objetos"}
+  - {manager: paru, name: lldb, description: "Debugger de alta performance da família LLVM"}
+  - {manager: brew, name: pipx, description: "Executa binários de pacotes Python em ambientes isolados"}
   # --- dev tooling (build, lint, docs) ---
-  - {
-      manager: paru,
-      name: tectonic,
-      description: "Engine TeX/LaTeX moderna, self-contained, baseada em XeTeX",
-    }
-  - {
-      manager: paru,
-      name: graphviz,
-      description: "Software de visualização de grafos (dot, neato, etc.)",
-    }
-  - {
-      manager: paru,
-      name: gnuplot,
-      description: "Plotador científico com várias saídas gráficas",
-    }
-  - {
-      manager: paru,
-      name: python-dbus,
-      description: "Bindings Python para D-Bus",
-    }
-  - {
-      manager: paru,
-      name: python-gobject,
-      description: "Bindings Python para GLib/GObject/GIO/GTK",
-    }
-  - {
-      manager: brew,
-      name: shellcheck,
-      description: "Análise estática e lint para scripts (ba)sh",
-    }
-  - {
-      manager: brew,
-      name: commitlint,
-      description: "Lint de mensagens de commit por convenção",
-    }
+  - {manager: paru, name: tectonic, description: "Engine TeX/LaTeX moderna, self-contained, baseada em XeTeX"}
+  - {manager: paru, name: graphviz, description: "Software de visualização de grafos (dot, neato, etc.)"}
+  - {manager: paru, name: gnuplot, description: "Plotador científico com várias saídas gráficas"}
+  - {manager: paru, name: python-dbus, description: "Bindings Python para D-Bus"}
+  - {manager: paru, name: python-gobject, description: "Bindings Python para GLib/GObject/GIO/GTK"}
+  - {manager: brew, name: shellcheck, description: "Análise estática e lint para scripts (ba)sh"}
+  - {manager: brew, name: commitlint, description: "Lint de mensagens de commit por convenção"}
   # --- APIs e automação web ---
-  - {
-      manager: paru,
-      name: bruno,
-      description: "Cliente open source para explorar e testar APIs",
-    }
-  - {
-      manager: paru,
-      name: playwright,
-      description: "Automação de Chromium, Firefox e WebKit via Node.js",
-    }
+  - {manager: paru, name: bruno, description: "Cliente open source para explorar e testar APIs"}
+  - {manager: paru, name: playwright, description: "Automação de Chromium, Firefox e WebKit via Node.js"}
   # --- GitHub e CI ---
-  - { manager: brew, name: gh, description: "CLI oficial do GitHub" }
+  - {manager: brew, name: gh, description: "CLI oficial do GitHub"}
   # --- containers ---
-  - {
-      manager: paru,
-      name: docker,
-      description: "Empacota, distribui e executa apps em containers",
-    }
-  - {
-      manager: paru,
-      name: docker-compose,
-      description: "Orquestra ambientes Docker isolados",
-    }
-  - {
-      manager: paru,
-      name: docker-buildx,
-      description: "Plugin CLI do Docker para builds com BuildKit",
-    }
-  - {
-      manager: paru,
-      name: docker-rootless-extras,
-      description: "Extras para rodar Docker sem root",
-    }
-  - {
-      manager: paru,
-      name: slirp4netns,
-      description: "Networking user-mode para namespaces sem privilégio",
-    }
-  - {
-      manager: paru,
-      name: fuse-overlayfs,
-      description: "Implementação FUSE do overlayfs",
-    }
-  - {
-      manager: brew,
-      name: docker-credential-helper,
-      description: "Helper de credenciais do Docker via keystore do SO",
-    }
+  - {manager: paru, name: docker, description: "Empacota, distribui e executa apps em containers"}
+  - {manager: paru, name: docker-compose, description: "Orquestra ambientes Docker isolados"}
+  - {manager: paru, name: docker-buildx, description: "Plugin CLI do Docker para builds com BuildKit"}
+  - {manager: paru, name: docker-rootless-extras, description: "Extras para rodar Docker sem root"}
+  - {manager: paru, name: slirp4netns, description: "Networking user-mode para namespaces sem privilégio"}
+  - {manager: paru, name: fuse-overlayfs, description: "Implementação FUSE do overlayfs"}
+  - {manager: brew, name: docker-credential-helper, description: "Helper de credenciais do Docker via keystore do SO"}
   # --- Kubernetes ---
-  - {
-      manager: brew,
-      name: kubernetes-cli,
-      description: "CLI do Kubernetes (kubectl)",
-    }
-  - {
-      manager: brew,
-      name: kubectx,
-      description: "Troca rápida entre contextos kubectl",
-    }
-  - {
-      manager: brew,
-      name: k9s,
-      description: "TUI para gerenciar clusters Kubernetes",
-    }
-  - {
-      manager: brew,
-      name: k3d,
-      description: "Roda k3s (CNCF) dentro do Docker",
-    }
-  - {
-      manager: brew,
-      name: helm,
-      description: "Gerenciador de pacotes do Kubernetes",
-    }
-  # --- cloud e IaC ---
-  - {
-      manager: brew,
-      name: opentofu,
-      description: "Substituto open source do Terraform (IaC)",
-    }
-  - {
-      manager: brew,
-      name: tflint,
-      description: "Linter para arquivos Terraform",
-    }
-  - {
-      manager: brew,
-      name: oci-cli,
-      description: "CLI da Oracle Cloud Infrastructure",
-    }
-  - {
-      manager: brew,
-      name: steipete/tap/gogcli,
-      description: "CLI para serviços Google (Gmail, Drive, Docs, Sheets)",
-    }
+  - {manager: brew, name: kubernetes-cli, description: "CLI do Kubernetes (kubectl)"}
+  - {manager: brew, name: kubectx, description: "Troca rápida entre contextos kubectl"}
+  - {manager: brew, name: k9s, description: "TUI para gerenciar clusters Kubernetes"}
+  - {manager: brew, name: k3d, description: "Roda k3s (CNCF) dentro do Docker"}
+  - {manager: brew, name: helm, description: "Gerenciador de pacotes do Kubernetes"}
   # --- servidores web e DNS ---
-  - {
-      manager: brew,
-      name: caddy,
-      description: "Servidor web com HTTPS automático",
-    }
-  - {
-      manager: brew,
-      name: nginx,
-      description: "Servidor HTTP(S) e proxy reverso",
-    }
-  - {
-      manager: brew,
-      name: dnsmasq,
-      description: "Forwarder DNS leve com servidor DHCP",
-    }
+  - {manager: brew, name: caddy, description: "Servidor web com HTTPS automático"}
+  - {manager: brew, name: nginx, description: "Servidor HTTP(S) e proxy reverso"}
+  - {manager: brew, name: dnsmasq, description: "Forwarder DNS leve com servidor DHCP"}
   # --- segurança e rede ---
-  - {
-      manager: paru,
-      name: opensnitch,
-      description: "Firewall por aplicação para Linux",
-    }
-  - {
-      manager: paru,
-      name: nmap,
-      description: "Scanner de rede e auditoria de segurança",
-    }
-  - {
-      manager: brew,
-      name: arp-scan,
-      description: "Scanner ARP e fingerprinting de rede",
-    }
-  - {
-      manager: paru,
-      name: bluez-utils,
-      description: "Utilitários de desenvolvimento e debug do stack Bluetooth",
-    }
+  - {manager: paru, name: opensnitch, description: "Firewall por aplicação para Linux"}
+  - {manager: paru, name: nmap, description: "Scanner de rede e auditoria de segurança"}
+  - {manager: brew, name: arp-scan, description: "Scanner ARP e fingerprinting de rede"}
+  - {manager: paru, name: bluez-utils, description: "Utilitários de desenvolvimento e debug do stack Bluetooth"}
   # --- GPU, vídeo e áudio (libs) ---
-  - {
-      manager: paru,
-      name: lact,
-      description: "Configuração de GPU no Linux (overclock, fan curve)",
-    }
-  - {
-      manager: brew,
-      name: libva,
-      description: "Lib de aceleração de vídeo em hardware",
-    }
-  - {
-      manager: brew,
-      name: libvdpau,
-      description: "Lib open source de decode e apresentação de vídeo",
-    }
-  - {
-      manager: brew,
-      name: libclc,
-      description: "Implementação da lib padrão de OpenCL C",
-    }
-  - {
-      manager: brew,
-      name: libplacebo,
-      description: "Lib reutilizável para processamento de vídeo em GPU",
-    }
-  - {
-      manager: brew,
-      name: libass,
-      description: "Renderizador de legendas ASS/SSA",
-    }
-  - {
-      manager: brew,
-      name: libbluray,
-      description: "Playback de Blu-Ray para players como VLC",
-    }
-  - {
-      manager: brew,
-      name: rubberband,
-      description: "Estica tempo de áudio sem alterar pitch",
-    }
-  - {
-      manager: brew,
-      name: vapoursynth,
-      description: "Framework de processamento de vídeo",
-    }
-  - {
-      manager: brew,
-      name: mujs,
-      description: "Interpretador JavaScript embedável",
-    }
-  # --- mídia (apps) ---
-  - {
-      manager: paru,
-      name: spotify,
-      description: "Streaming de música (cliente proprietário)",
-    }
-  - {
-      manager: paru,
-      name: vlc,
-      description: "Player multimídia cross-platform livre",
-    }
-  - {
-      manager: paru,
-      name: mpv,
-      description: "Player multimídia minimalista e scriptável",
-    }
-  - {
-      manager: brew,
-      name: ffmpeg,
-      description: "Toolkit para áudio/vídeo (play, gravar, converter, stream)",
-    }
-  - {
-      manager: brew,
-      name: yt-dlp,
-      description: "Downloader de áudio/vídeo via CLI (fork do youtube-dl)",
-    }
-  - { manager: paru, name: flite, description: "Engine leve de síntese de voz" }
-  # --- Android ---
-  - {
-      manager: paru,
-      name: waydroid,
-      description: "Roda Android completo em container sobre Linux",
-    }
-  - {
-      manager: paru,
-      name: waydroid-settings-git,
-      description: "App GTK em Python para configurar o Waydroid",
-    }
+  - {manager: paru, name: lact, description: "Configuração de GPU no Linux (overclock, fan curve)"}
+  - {manager: brew, name: libva, description: "Lib de aceleração de vídeo em hardware"}
+  - {manager: brew, name: libvdpau, description: "Lib open source de decode e apresentação de vídeo"}
+  - {manager: brew, name: libclc, description: "Implementação da lib padrão de OpenCL C"}
+  - {manager: brew, name: libplacebo, description: "Lib reutilizável para processamento de vídeo em GPU"}
+  - {manager: brew, name: libass, description: "Renderizador de legendas ASS/SSA"}
+  - {manager: brew, name: libbluray, description: "Playback de Blu-Ray para players como VLC"}
+  - {manager: brew, name: rubberband, description: "Estica tempo de áudio sem alterar pitch"}
+  - {manager: brew, name: vapoursynth, description: "Framework de processamento de vídeo"}
+  - {manager: brew, name: mujs, description: "Interpretador JavaScript embedável"}
+  - {manager: paru, name: vlc, description: "Player multimídia cross-platform livre"}
+  - {manager: paru, name: mpv, description: "Player multimídia minimalista e scriptável"}
+  - {manager: brew, name: ffmpeg, description: "Toolkit para áudio/vídeo (play, gravar, converter, stream)"}
+  - {manager: brew, name: yt-dlp, description: "Downloader de áudio/vídeo via CLI (fork do youtube-dl)"}
+  - {manager: paru, name: flite, description: "Engine leve de síntese de voz"}
   # --- conhecimento, notas, produtividade ---
-  - {
-      manager: paru,
-      name: obsidian,
-      description: "Knowledge base sobre pastas locais de Markdown",
-    }
-  - {
-      manager: brew,
-      name: yakitrak/yakitrak/obsidian-cli,
-      description: "CLI para manipular notas do Obsidian",
-    }
-  - {
-      manager: paru,
-      name: superproductivity-bin,
-      description: "Lista de tarefas com time tracking integrado",
-    }
-  - {
-      manager: paru,
-      name: homebank,
-      description: "Contabilidade pessoal simples e gratuita",
-    }
-  - {
-      manager: brew,
-      name: hugo,
-      description: "Gerador de sites estáticos configurável",
-    }
-  - {
-      manager: brew,
-      name: dagu,
-      description: "Workflow engine leve sem dependências externas",
-    }
-  # --- agentes de IA e dev assistants ---
-  - {
-      manager: brew,
-      name: aider,
-      description: "Pair programming com IA no terminal",
-    }
-  - {
-      manager: brew,
-      name: gemini-cli,
-      description: "CLI para interagir com modelos Google Gemini",
-    }
-  - {
-      manager: snap,
-      name: pieces-for-developers,
-      description: "App Pieces para devs (snippets e workflow com IA)",
-    }
-  - {
-      manager: snap,
-      name: pieces-os,
-      description: "Serviço de background dos produtos Pieces",
-    }
+  - {manager: paru, name: obsidian, description: "Knowledge base sobre pastas locais de Markdown"}
+  - {manager: brew, name: yakitrak/yakitrak/obsidian-cli, description: "CLI para manipular notas do Obsidian"}
+  - {manager: paru, name: superproductivity-bin, description: "Lista de tarefas com time tracking integrado"}
+  - {manager: brew, name: hugo, description: "Gerador de sites estáticos configurável"}
   # --- TUIs (monitor, dados, DB) ---
-  - {
-      manager: paru,
-      name: htop,
-      description: "Visualizador interativo de processos",
-    }
-  - {
-      manager: brew,
-      name: dust,
-      description: "du mais intuitivo, escrito em Rust",
-    }
-  - {
-      manager: brew,
-      name: harlequin,
-      description: "Cliente de banco de dados para o terminal",
-    }
+  - {manager: paru, name: htop, description: "Visualizador interativo de processos"}
+  - {manager: brew, name: dust, description: "du mais intuitivo, escrito em Rust"}
+  - {manager: brew, name: harlequin, description: "Cliente de banco de dados para o terminal"}
   # --- utilitários CLI ---
-  - {
-      manager: brew,
-      name: jq,
-      description: "Processador JSON de linha de comando",
-    }
-  - {
-      manager: brew,
-      name: yq,
-      description: "Processa YAML, JSON, XML, CSV e properties via CLI",
-    }
-  - {
-      manager: brew,
-      name: miller,
-      description: "sed/awk/cut/join/sort para dados indexados por nome (CSV)",
-    }
-  - {
-      manager: paru,
-      name: 7zip,
-      description: "Compactador de arquivos com alta taxa de compressão",
-    }
-  - {
-      manager: paru,
-      name: rsync,
-      description: "Cópia rápida e versátil de arquivos locais/remotos",
-    }
-  - {
-      manager: brew,
-      name: qpdf,
-      description: "Ferramentas de inspeção e transformação de PDFs",
-    }
-  - { manager: brew, name: ddgr, description: "DuckDuckGo direto do terminal" }
-  - {
-      manager: brew,
-      name: s-search,
-      description: "Busca web via shortcuts no terminal",
-    }
-  - {
-      manager: paru,
-      name: xorg-xev,
-      description: "Imprime eventos X recebidos por uma janela",
-    }
+  - {manager: brew, name: jq, description: "Processador JSON de linha de comando"}
+  - {manager: brew, name: yq, description: "Processa YAML, JSON, XML, CSV e properties via CLI"}
+  - {manager: brew, name: miller, description: "sed/awk/cut/join/sort para dados indexados por nome (CSV)"}
+  - {manager: paru, name: 7zip, description: "Compactador de arquivos com alta taxa de compressão"}
+  - {manager: paru, name: rsync, description: "Cópia rápida e versátil de arquivos locais/remotos"}
+  - {manager: brew, name: qpdf, description: "Ferramentas de inspeção e transformação de PDFs"}
+  - {manager: paru, name: xorg-xev, description: "Imprime eventos X recebidos por uma janela"}
   # --- libs gerais ---
-  - {
-      manager: paru,
-      name: libproxy,
-      description: "Gerenciamento automático de configuração de proxy",
-    }
-  - { manager: paru, name: libxml2, description: "Parser e toolkit XML em C" }
-  - {
-      manager: brew,
-      name: libarchive,
-      description: "Lib multi-formato de arquivos e compressão",
-    }
+  - {manager: paru, name: libproxy, description: "Gerenciamento automático de configuração de proxy"}
+  - {manager: paru, name: libxml2, description: "Parser e toolkit XML em C"}
+  - {manager: brew, name: libarchive, description: "Lib multi-formato de arquivos e compressão"}
   # --- gerenciadores de apps (GUI) ---
-  - {
-      manager: paru,
-      name: bauh,
-      description: "GUI para gerenciar AppImage, Flatpak, Snap, AUR e Web apps",
-    }
-  - {
-      manager: paru,
-      name: appimagepool-appimage,
-      description: "Cliente AppImageHub em Flutter",
-    }
+  - {manager: paru, name: bauh, description: "GUI para gerenciar AppImage, Flatpak, Snap, AUR e Web apps"}
+  - {manager: paru, name: appimagepool-appimage, description: "Cliente AppImageHub em Flutter"}
   # --- hardware ---
-  - {
-      manager: paru,
-      name: rpi-imager,
-      description: "Grava imagens em SD card do Raspberry Pi",
-    }
+  - {manager: paru, name: rpi-imager, description: "Grava imagens em SD card do Raspberry Pi"}
   # --- torrent ---
-  - {
-      manager: paru,
-      name: deluge-gtk,
-      description: "Cliente BitTorrent leve em GTK",
-    }
+  - {manager: paru, name: deluge-gtk, description: "Cliente BitTorrent leve em GTK"}
