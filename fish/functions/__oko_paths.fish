@@ -1,7 +1,9 @@
 function __oko_paths --description 'Resolve oko home paths'
     set -l home $OKO_HOME
     if test -z "$home"
-        set home /home/kuresto/Chronopolis/control/garuda/pkgs
+        # Derive default from this script's location: <repo>/fish/functions/__oko_paths.fish → <repo>/pkgs
+        set -l self (realpath (status filename))
+        set home (dirname (dirname (dirname $self)))/pkgs
     end
     switch $argv[1]
         case home

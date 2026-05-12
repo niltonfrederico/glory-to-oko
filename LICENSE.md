@@ -68,7 +68,7 @@ O direito de uso cessa imediatamente se o operador:
 
 ## Artigo 5 — Cláusula de propriedade intelectual
 
-Os direitos morais do Artefato pertencem ao Camarada `kuresto`. Os direitos patrimoniais pertencem ao Departamento. Os direitos [REDACTED] pertencem a uma entidade cuja designação **não pode ser pronunciada em ambiente fechado** e que, por respeito ao protocolo, será aqui referida apenas como "o Auditor".
+Os direitos morais do Artefato pertencem ao Camarada `[REDACTED]`. Os direitos patrimoniais pertencem ao Departamento. Os direitos [REDACTED] pertencem a uma entidade cuja designação **não pode ser pronunciada em ambiente fechado** e que, por respeito ao protocolo, será aqui referida apenas como "o Auditor".
 
 O Auditor não responde correspondências. O Auditor **lê** todas elas.
 
@@ -113,7 +113,7 @@ A presente licença é **revogável a qualquer tempo, sem aviso prévio**, excet
 
 > **Aviso ao leitor:** a presença de carimbo APPROVED nesta diretiva **não constitui aprovação do conteúdo aqui descrito**, mas tão somente do papel em que foi impresso. O conteúdo permanece sob revisão indefinida do [REDACTED].
 >
-> Distribuição: kuresto · [REDACTED] · [REDACTED] · arquivo morto · cópia adicional enviada por engano para [REDACTED] (já recuperada).
+> Distribuição: [REDACTED] · [REDACTED] · [REDACTED] · arquivo morto · cópia adicional enviada por engano para [REDACTED] (já recuperada).
 
 ```
 Документы [ИЗЪЯТО].

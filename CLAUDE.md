@@ -1,6 +1,6 @@
 # Garuda — operações no host
 
-Repo de apoio pra gerenciar o sistema operacional do Nilton (Garuda Linux, KDE/Wayland, fish): buscar informação, modificar config, escrever guias de como modificar.
+Repo de apoio pra gerenciar o sistema operacional do operador (Garuda Linux, KDE/Wayland, fish): buscar informação, modificar config, escrever guias de como modificar.
 
 ## Configuração herdada
 
@@ -21,11 +21,11 @@ Este projeto **estende** o setup global do Claude Code. Em caso de conflito, **a
 
 - **Use fish, não bash**, em qualquer comando que você executar via Bash tool. Sintaxe (`set`, `and`/`or`, `$status`, `$argv`, blocos `begin`/`end`), redireção (`^` vs `2>`), funções em `~/.config/fish/functions/`. Veja `@~/.claude/languages/fish.md` pra o resto.
 - **Antes de propor mudança no sistema**, consulte `pd info system --ai` — retorna JSON com hardware, OS, GUI, terminal, apps instalados. Use isso como source-of-truth pro estado atual do host em vez de assumir.
-- **Permissões fish liberadas**: pode rodar comandos fish sem confirmação. Ações destrutivas (pacman -R, systemctl disable em unit crítica, rm -rf fora de `/tmp` e `/home/kuresto/Chronopolis/`, mudança em config global) continuam exigindo confirmação explícita — o blast radius do host inteiro é alto.
+- **Permissões fish liberadas**: pode rodar comandos fish sem confirmação. Ações destrutivas (pacman -R, systemctl disable em unit crítica, rm -rf fora de `/tmp` e do diretório raiz deste projeto, mudança em config global) continuam exigindo confirmação explícita — o blast radius do host inteiro é alto.
 - **Guias**: quando o usuário pedir "como faço pra X", escreva o guia em PT-BR, com comandos fish executáveis, e indique claramente o que é reversível vs destrutivo.
 
 ## Notas para o Claude
 
-- O host é daily-driver do Nilton — uptime e estabilidade importam. Trate mudanças no sistema com a mesma seriedade de produção.
+- O host é daily-driver do operador — uptime e estabilidade importam. Trate mudanças no sistema com a mesma seriedade de produção.
 - `pd` está em desenvolvimento ativo (`plaguedoctor`). Se um subcomando não existir, não invente — surface o gap.
 - `.remember/` é estado do plugin `remember`; não comitar mexidas nele.

@@ -37,10 +37,10 @@ A `0001_initial.yaml` foi gerada a partir do `installed-packages.md` e marcada c
 **Primeira vez** — linka as funções e completions na unha (ajuste o caminho se o projeto mudou):
 
 ```fish
-for f in ~/Chronopolis/control/garuda/fish/functions/*.fish
+for f in <repo>/fish/functions/*.fish
     ln -sf $f ~/.config/fish/functions/(basename $f)
 end
-for f in ~/Chronopolis/control/garuda/fish/completions/*.fish
+for f in <repo>/fish/completions/*.fish
     ln -sf $f ~/.config/fish/completions/(basename $f)
 end
 ```
@@ -56,7 +56,7 @@ Resincroniza tudo (functions + completions) a partir deste repo. Idempotente.
 Pra desinstalar, é só remover os symlinks:
 
 ```fish
-for f in ~/Chronopolis/control/garuda/fish/functions/__oko_*.fish ~/Chronopolis/control/garuda/fish/functions/oko.fish ~/Chronopolis/control/garuda/fish/functions/oko-update.fish
+for f in <repo>/fish/functions/__oko_*.fish <repo>/fish/functions/oko.fish <repo>/fish/functions/oko-update.fish
     rm -f ~/.config/fish/functions/(basename $f)
 end
 rm -f ~/.config/fish/completions/oko.fish
@@ -64,7 +64,7 @@ rm -f ~/.config/fish/completions/oko.fish
 
 ## Variáveis de ambiente
 
-- `OKO_HOME` — diretório com `manifest.yaml`/`state.yaml`/`migrations/`. Default: `/home/kuresto/Chronopolis/control/garuda/pkgs`.
+- `OKO_HOME` — diretório com `manifest.yaml`/`state.yaml`/`migrations/`. Default: derivado da localização das funções (`<repo>/pkgs`).
 
 ## Comandos
 

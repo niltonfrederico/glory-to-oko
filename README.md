@@ -2,15 +2,15 @@
 
 ```
 ╔══════════════════════════════════════════════════════════════╗
-║  ОТДЕЛ ОПЕРАЦИЙ И КОНТРОЛЯ · ДОКУМЕНТЫ ПОЖАЛУЙСТА            ║
-║  Departamento de Operações e Controle                       ║
+║  ОТДЕЛ ОПЕРАЦИЙ И КОНТРОЛЯ · ДОКУМЕНТЫ ПОЖАЛУЙСТА           ║
+║  Departamento de Operações e Controle                        ║
 ╚══════════════════════════════════════════════════════════════╝
 ```
 
 > *"Não há pacotes ilegais — apenas papéis em desordem."*
 > — Manual do Inspetor, edição revisada, capítulo 4
 
-Repositório de controle interno do Camarada `kuresto`. Toda admissão e deportação de pacotes neste estado-soberano (Garuda Linux, kernel zen, fish 4.7.1, KDE/Wayland) passa pelo carimbo do **Departamento**.
+Repositório de controle interno do Camarada `[REDACTED]`. Toda admissão e deportação de pacotes neste estado-soberano (Garuda Linux, kernel zen, fish 4.7.1, KDE/Wayland) passa pelo carimbo do **Departamento**.
 
 A doutrina é simples: **o manifesto é a verdade declarada, as migrations são o arquivo histórico, o sistema é apenas o reflexo material da burocracia.**
 
@@ -58,13 +58,13 @@ oko-update              # resincronizar o Inspetor a partir do arquivo-fonte
 
 ## Instalação do Inspetor
 
-**Primeira nomeação** — symlinks na unha:
+**Primeira nomeação** — symlinks na unha (substitua `<repo>` pelo caminho local do clone):
 
 ```fish
-for f in ~/Chronopolis/control/garuda/fish/functions/*.fish
+for f in <repo>/fish/functions/*.fish
     ln -sf $f ~/.config/fish/functions/(basename $f)
 end
-for f in ~/Chronopolis/control/garuda/fish/completions/*.fish
+for f in <repo>/fish/completions/*.fish
     ln -sf $f ~/.config/fish/completions/(basename $f)
 end
 ```
