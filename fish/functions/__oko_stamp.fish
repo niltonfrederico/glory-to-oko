@@ -13,13 +13,13 @@ function __oko_stamp --description 'ASCII stamp for the Department'
             echo -e "$green   ┌──────────────────────┐$reset"
             echo -e "$green   │      APPROVED        │$reset"
             echo -e "$green   │  ★    О К    ★       │$reset"
-            echo -e "$green   │   Документы в порядке │$reset"
+            echo -e "$green   │  Документы в порядке │$reset"
             echo -e "$green   └──────────────────────┘$reset $dim$label$reset"
         case rejected
             echo -e "$red   ┌──────────────────────┐$reset"
             echo -e "$red   │      REJECTED        │$reset"
             echo -e "$red   │  ✖    Н Е Т    ✖     │$reset"
-            echo -e "$red   │  Документы не в порядке│$reset"
+            echo -e "$red   │Документы не в порядке│$reset"
             echo -e "$red   └──────────────────────┘$reset $dim$label$reset"
         case inspected
             echo -e "$yellow   ┌──────────────────────┐$reset"

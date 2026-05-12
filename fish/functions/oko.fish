@@ -42,8 +42,8 @@ function __oko_help --description 'Show oko usage'
     echo
     echo "  $y""Procedimentos autorizados:$r"
     echo
-    echo "    oko install   (i)   <pkg…>    $d→ admitir indivíduos pela fronteira$r"
-    echo "    oko remove    (r)   <pkg…>    $d→ deportar indivíduos$r"
+    echo "    oko install   (i)   <pkg…>    $d→ declarar entrada; redige migration e pergunta se aplica$r"
+    echo "    oko remove    (r)   <pkg…>    $d→ declarar saída; redige migration e pergunta se aplica$r"
     echo "    oko check     (c)   <pkg…>    $d→ inspecionar documentos$r"
     echo "    oko makemigrations (mm)       $d→ arquivar diff manifest×histórico$r"
     echo "    oko migrate   (mi)            $d→ aplicar migrations pendentes$r"
