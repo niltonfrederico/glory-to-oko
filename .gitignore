@@ -1,0 +1,29 @@
+# Claude / agent scratch
+.remember/
+.claude/local/
+.claude/cache/
+
+# Editor / OS noise
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Demo screenshots usados em conversas — não pertencem ao repo
+*.png
+*.jpg
+*.jpeg
+
+# Backups acidentais
+*.bak
+*.orig
+*.rej
+
+# Logs
+*.log
+
+.remember
+.claude/*
+!.claude/commands/oko-describe.md
