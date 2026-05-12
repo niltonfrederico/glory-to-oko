@@ -34,22 +34,32 @@ A `0001_initial.yaml` foi gerada a partir do `installed-packages.md` e marcada c
 
 ## Como instalar
 
-Linka as funções no fish (ajuste o caminho do projeto se mudou):
+**Primeira vez** — linka as funções e completions na unha (ajuste o caminho se o projeto mudou):
 
 ```fish
 for f in ~/Chronopolis/control/garuda/fish/functions/*.fish
     ln -sf $f ~/.config/fish/functions/(basename $f)
 end
+for f in ~/Chronopolis/control/garuda/fish/completions/*.fish
+    ln -sf $f ~/.config/fish/completions/(basename $f)
+end
 ```
 
-Daí qualquer shell fish nova já tem `oko` disponível.
+**Atualizações subsequentes** — depois que `oko-update` está no PATH:
+
+```fish
+oko-update
+```
+
+Resincroniza tudo (functions + completions) a partir deste repo. Idempotente.
 
 Pra desinstalar, é só remover os symlinks:
 
 ```fish
-for f in ~/Chronopolis/control/garuda/fish/functions/__oko_*.fish ~/Chronopolis/control/garuda/fish/functions/oko.fish
+for f in ~/Chronopolis/control/garuda/fish/functions/__oko_*.fish ~/Chronopolis/control/garuda/fish/functions/oko.fish ~/Chronopolis/control/garuda/fish/functions/oko-update.fish
     rm -f ~/.config/fish/functions/(basename $f)
 end
+rm -f ~/.config/fish/completions/oko.fish
 ```
 
 ## Variáveis de ambiente
