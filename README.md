@@ -10,9 +10,27 @@
 > *"Não há pacotes ilegais — apenas papéis em desordem."*
 > — Manual do Inspetor, edição revisada, capítulo 4
 
-Repositório de controle interno do Camarada `[REDACTED]`. Toda admissão e deportação de pacotes neste estado-soberano (Garuda Linux, kernel zen, fish 4.7.1, KDE/Wayland) passa pelo carimbo do **Departamento**.
+Repositório de controle interno do Camarada `[REDACTED]`. Toda admissão e deportação de pacotes neste estado-soberano (`[REDACTED]`, `[REDACTED]`, fish 4.7.1, `[REDACTED]`/Wayland) passa pelo carimbo do **Departamento**.
 
 A doutrina é simples: **o manifesto é a verdade declarada, as migrations são o arquivo histórico, o sistema é apenas o reflexo material da burocracia.**
+
+---
+
+## Sumário
+
+- [Doutrina](#doutrina)
+- [Diretrizes](#diretrizes)
+- [Procedimentos autorizados](#procedimentos-autorizados)
+- [Instalação do Inspetor](#instalação-do-inspetor)
+- [Layout do arquivo central](#layout-do-arquivo-central)
+- [Dependências externas reconhecidas](#dependências-externas-reconhecidas)
+- [Variáveis de Estado](#variáveis-de-estado)
+- [Avisos finais](#avisos-finais)
+
+**Documentos correlatos:**
+
+- [`fish/README.md`](fish/README.md) — manual técnico interno do Inspetor
+- [`LICENSE.md`](LICENSE.md) — Diretiva Interna Nº ███-Δ/█026 (uso, custódia, força maior)
 
 ---
 
@@ -80,7 +98,7 @@ oko-update
 ## Layout do arquivo central
 
 ```
-garuda/
+[REDACTED]/
 ├── fish/
 │   ├── functions/          # corpo doutrinário do Inspetor (oko + helpers)
 │   ├── completions/        # tabulação assistida

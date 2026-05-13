@@ -1,29 +1,29 @@
 version: 1
 packages:
-  # --- sistema base e Garuda ---
+  # --- sistema base e [REDACTED] ---
   - {manager: paru, name: base-devel, description: "Ferramentas base para compilar pacotes do Arch"}
-  - {manager: paru, name: performance-tweaks, description: "Ajustes de performance do Garuda"}
-  - {manager: paru, name: linux-headers, description: "Headers do kernel para compilar módulos"}
+  - {manager: paru, name: performance-tweaks, description: "Ajustes de performance do [REDACTED]"}
+  - {manager: paru, name: linux-headers, description: "Headers do [REDACTED] para compilar módulos"}
   - {manager: paru, name: v4l2loopback-dkms, description: "Módulo v4l2-loopback (câmera virtual) via DKMS"}
   - {manager: paru, name: fwupd, description: "Daemon de atualização de firmware via LVFS"}
   - {manager: paru, name: rate-mirrors, description: "Ranqueia mirrors do Arch por latência e proximidade"}
-  - {manager: paru, name: garuda-mokka, description: "Tema Mokka e presets de desktop do Garuda"}
-  - {manager: paru, name: garuda-toolbox, description: "Coleção de ferramentas para gerenciar o Garuda Linux"}
-  # --- KDE / desktop ---
-  - {manager: paru, name: kwin-effect-rounded-corners-git, description: "Cantos arredondados em janelas no KWin Wayland"}
-  - {manager: paru, name: kwin-effects-better-blur-dx, description: "Fork do efeito blur do KWin com força por classe de janela"}
-  - {manager: paru, name: ark, description: "Gerenciador de arquivos compactados do KDE"}
-  - {manager: paru, name: dolphin, description: "Gerenciador de arquivos do KDE"}
-  - {manager: paru, name: kate, description: "Editor de texto avançado do KDE"}
-  - {manager: paru, name: okular, description: "Visualizador de documentos do KDE"}
-  - {manager: paru, name: partitionmanager, description: "Utilitário KDE para particionamento e filesystems"}
+  - {manager: paru, name: garuda-mokka, description: "Tema Mokka e presets de desktop do [REDACTED]"}
+  - {manager: paru, name: garuda-toolbox, description: "Coleção de ferramentas para gerenciar o [REDACTED]"}
+  # --- [REDACTED] / desktop ---
+  - {manager: paru, name: kwin-effect-rounded-corners-git, description: "Cantos arredondados em janelas no [REDACTED] Wayland"}
+  - {manager: paru, name: kwin-effects-better-blur-dx, description: "Fork do efeito blur do [REDACTED] com força por classe de janela"}
+  - {manager: paru, name: ark, description: "Gerenciador de arquivos compactados do [REDACTED]"}
+  - {manager: paru, name: dolphin, description: "Gerenciador de arquivos do [REDACTED]"}
+  - {manager: paru, name: kate, description: "Editor de texto avançado do [REDACTED]"}
+  - {manager: paru, name: okular, description: "Visualizador de documentos do [REDACTED]"}
+  - {manager: paru, name: partitionmanager, description: "Utilitário [REDACTED] para particionamento e filesystems"}
   - {manager: paru, name: qdirstat, description: "Estatísticas visuais de uso de diretórios em Qt"}
   - {manager: paru, name: vicinae-bin, description: "Launcher tipo Raycast, FOSS, para Linux"}
   # --- terminal e shell ---
   - {manager: paru, name: ghostty, description: "Emulador de terminal nativo acelerado por GPU"}
   - {manager: brew, name: tmux, description: "Multiplexador de terminal"}
   # --- input method e i18n ---
-  - {manager: paru, name: wayland-cedilla-fix, description: "Corrige cedilha (ç) em compositores Wayland"}
+  - {manager: paru, name: wayland-cedilla-fix, description: "Corrige cedilha (ç) em compositores [REDACTED]"}
   - {manager: paru, name: fcitx5, description: "Framework de input method (próxima geração do fcitx)"}
   - {manager: paru, name: fcitx5-configtool, description: "Ferramenta de configuração do Fcitx5"}
   - {manager: paru, name: fcitx5-gtk, description: "Módulo IM GTK e cliente D-Bus do Fcitx5"}
