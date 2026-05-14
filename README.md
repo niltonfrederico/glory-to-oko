@@ -83,16 +83,13 @@ oko-update              # resincronizar o Inspetor + semear ~/.oko/config.yaml
 
 ## Instalação do Inspetor
 
-**Primeira nomeação** — symlinks na unha (substitua `<repo>` pelo caminho local do clone):
+**Primeira nomeação** — rode o script de bootstrap (linka functions/completions com paths absolutos e semeia `~/.oko/config.yaml`):
 
 ```fish
-for f in <repo>/fish/functions/*.fish
-    ln -sf $f ~/.config/fish/functions/(basename $f)
-end
-for f in <repo>/fish/completions/*.fish
-    ln -sf $f ~/.config/fish/completions/(basename $f)
-end
+fish install.fish
 ```
+
+Idempotente — re-rodar é seguro. Use só quando `oko-update` ainda não está disponível no host (primeira instalação ou symlinks quebrados).
 
 **Atualizações posteriores** — uma vez nomeado, o próprio Inspetor se atualiza:
 
