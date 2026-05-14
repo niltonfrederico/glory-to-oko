@@ -27,3 +27,7 @@
 .remember
 .claude/*
 !.claude/commands/oko-describe.md
+
+# Migrations são estado local — não comitar conteúdo, apenas o .gitkeep
+pkgs/migrations/*
+!pkgs/migrations/.gitkeep
