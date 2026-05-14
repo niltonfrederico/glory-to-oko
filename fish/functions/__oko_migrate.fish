@@ -18,6 +18,20 @@ function __oko_migrate --description 'Apply pending migrations, batching ops per
 
         __oko_say info "Aplicando $id..."
 
+        # ---------------- UPGRADE replay (informational only) ----------------
+        # Upgrade migrations are an audit trail: versions move forward
+        # autonomously and cannot be replayed deterministically. We log
+        # the encounter and mark the migration as applied without action.
+        set -l n_up (yq '[.operations[] | select(.action == "upgrade") | .managers[].name] | length' $f)
+        if test "$n_up" -gt 0
+            set -l names (yq -r '.operations[] | select(.action == "upgrade") | .managers[].name' $f | string join ', ')
+            __oko_say hush "$id é registro histórico de upgrade ($names) — sem replay."
+            __oko_state mark $id
+            __oko_stamp approved "$id reconhecida"
+            set ran (math $ran + 1)
+            continue
+        end
+
         # ---------------- INSTALL replay ----------------
         # Bucket pkgs by manager (resolving missing managers on the fly).
         set -l n_in (yq '[.operations[] | select(.action == "install") | .packages[].name] | length' $f)
