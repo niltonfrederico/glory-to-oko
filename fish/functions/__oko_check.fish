@@ -15,8 +15,9 @@ function __oko_check --description 'Inspect a package across all known managers'
         printf "  %-10s %-12s %-12s\n" MANAGER AVAILABLE INSTALLED
         printf "  %-10s %-12s %-12s\n" ───────── ───────── ─────────
         set -l first_available ""
-        for m in brew uvx pipx npm paru snap
-            set -l av "-"; set -l ic "-"
+        for m in (__oko_config managers)
+            set -l av -
+            set -l ic -
             if __oko_probe available $m $pkg
                 set av "$green ✔$reset"
                 if test -z "$first_available"

@@ -8,28 +8,35 @@ function __oko_do --description 'Execute install/remove via a specific manager. 
         return 1
     end
 
+    set -l cmd (__oko_config command $manager)
+    set -l args (__oko_config args $manager)
+    set -l use_sudo 0
+    if __oko_config sudoer $manager
+        set use_sudo 1
+    end
+
     switch $action
         case install
             switch $manager
                 case brew
-                    brew install -- $pkgs
+                    __oko_do_run $use_sudo $cmd $args install -- $pkgs
                 case uvx
                     for p in $pkgs
-                        uv tool install -- $p
+                        __oko_do_run $use_sudo $cmd $args tool install -- $p
                         or return $status
                     end
                 case pipx
                     for p in $pkgs
-                        pipx install -- $p
+                        __oko_do_run $use_sudo $cmd $args install -- $p
                         or return $status
                     end
                 case npm
-                    npm install -g -- $pkgs
+                    __oko_do_run $use_sudo $cmd $args install -g -- $pkgs
                 case paru
-                    paru -S --needed --noconfirm -- $pkgs
+                    __oko_do_run $use_sudo $cmd $args -S --needed --noconfirm -- $pkgs
                 case snap
                     for p in $pkgs
-                        sudo snap install -- $p
+                        __oko_do_run $use_sudo $cmd $args install -- $p
                         or return $status
                     end
                 case '*'
@@ -38,27 +45,37 @@ function __oko_do --description 'Execute install/remove via a specific manager. 
         case remove
             switch $manager
                 case brew
-                    brew uninstall -- $pkgs
+                    __oko_do_run $use_sudo $cmd $args uninstall -- $pkgs
                 case uvx
                     for p in $pkgs
-                        uv tool uninstall -- $p
+                        __oko_do_run $use_sudo $cmd $args tool uninstall -- $p
                         or return $status
                     end
                 case pipx
                     for p in $pkgs
-                        pipx uninstall -- $p
+                        __oko_do_run $use_sudo $cmd $args uninstall -- $p
                         or return $status
                     end
                 case npm
-                    npm uninstall -g -- $pkgs
+                    __oko_do_run $use_sudo $cmd $args uninstall -g -- $pkgs
                 case paru
-                    paru -Rns --noconfirm -- $pkgs
+                    __oko_do_run $use_sudo $cmd $args -Rns --noconfirm -- $pkgs
                 case snap
-                    sudo snap remove --purge -- $pkgs
+                    __oko_do_run $use_sudo $cmd $args remove --purge -- $pkgs
                 case '*'
                     return 1
             end
         case '*'
             return 1
+    end
+end
+
+function __oko_do_run --description 'Run a command, optionally under sudo (first arg: 1|0)'
+    set -l use_sudo $argv[1]
+    set -l rest $argv[2..]
+    if test "$use_sudo" = 1
+        sudo $rest
+    else
+        $rest
     end
 end
