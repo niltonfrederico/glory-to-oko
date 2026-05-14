@@ -30,5 +30,14 @@ function oko-update --description 'Re-link oko functions and completions from th
     __oko_header
     __oko_say ok "$fn_count function(s) sincronizada(s) ← $fn_src"
     __oko_say ok "$cp_count completion(s) sincronizada(s) ← $cp_src"
+
+    set -l cfg (__oko_config_path)
+    if test -f $cfg
+        __oko_say hush "Config já existe em $cfg — preservada."
+    else
+        __oko_config_init
+        __oko_say ok "Config inicial em $cfg"
+    end
+
     __oko_say hush "Abra um novo shell fish ou rode 'source ~/.config/fish/config.fish' para recarregar."
 end

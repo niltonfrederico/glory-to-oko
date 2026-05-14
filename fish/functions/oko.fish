@@ -24,6 +24,11 @@ function oko --description 'Departamento de Operações e Controle — package m
         case migrate mi
             __oko_header
             __oko_migrate $rest
+        case upgrade u
+            __oko_header
+            __oko_upgrade $rest
+        case system s
+            __oko_system $rest
         case help -h --help
             __oko_header
             __oko_help
@@ -45,10 +50,12 @@ function __oko_help --description 'Show oko usage'
     echo "    oko install   (i)   <pkg…>    $d→ declarar entrada; redige migration e pergunta se aplica$r"
     echo "    oko remove    (r)   <pkg…>    $d→ declarar saída; redige migration e pergunta se aplica$r"
     echo "    oko check     (c)   <pkg…>    $d→ inspecionar documentos$r"
+    echo "    oko upgrade   (u)             $d→ atualizar managers em ordem; arquiva migration audit-only$r"
+    echo "    oko system    (s)   [flags]   $d→ snapshot do host (hardware/OS/GUI/apps/...) em JSON/YAML/CSV$r"
     echo "    oko makemigrations (mm)       $d→ arquivar diff manifest×histórico$r"
     echo "    oko migrate   (mi)            $d→ aplicar migrations pendentes$r"
     echo
-    echo "  $y""Cadeia de prioridade:$r brew → uvx → pipx → npm → paru → snap"
+    echo "  $y""Cadeia de prioridade:$r vem de "(__oko_config_path)
     echo "  $y""Lar do registro:$r       "(__oko_paths home)
     echo
     echo "  $d""Документы пожалуйста.$r"
